@@ -152,15 +152,6 @@ body {
     0 0 80px rgba(255, 0, 128, 0.2);
 }
 
-/* Neon Text Effect */
-.neon-text {
-  text-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 15px currentColor,
-    0 0 20px currentColor;
-}
-
 /* Glitch Animation */
 @keyframes glitch {
   0% { transform: translate(0); }
@@ -169,10 +160,6 @@ body {
   60% { transform: translate(2px, 2px); }
   80% { transform: translate(2px, -2px); }
   100% { transform: translate(0); }
-}
-
-.glitch:hover {
-  animation: glitch 0.3s ease-in-out;
 }
 
 /* Pulse Animation */

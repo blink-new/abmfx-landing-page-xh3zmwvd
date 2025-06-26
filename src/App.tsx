@@ -35,7 +35,7 @@ function App() {
             <div className="flex justify-center items-center mb-8">
               <div className="cyber-card rounded-2xl p-6 float-cyber">
                 <div className="relative">
-                  <TrendingUp className="w-16 h-16 text-neon-cyan neon-text" />
+                  <TrendingUp className="w-16 h-16 text-neon-cyan " />
                   <div className="absolute -top-2 -right-2 w-4 h-4 bg-neon-pink rounded-full animate-pulse-neon"></div>
                 </div>
               </div>
