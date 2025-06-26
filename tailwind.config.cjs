@@ -2,7 +2,7 @@
 module.exports = {
     darkMode: ["class"],
     content: [
-    "./index.html",
+    "index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -80,23 +80,38 @@ module.exports = {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			},
-  			// ABMFX Custom Colors
-  			navy: {
-  				'600': 'hsl(var(--navy-600))',
-  				'700': 'hsl(var(--navy-700))',
-  				'800': 'hsl(var(--navy-800))',
-  				'900': 'hsl(var(--navy-900))'
+  			// Futuristic Cyber Colors
+  			cyber: {
+  				black: 'hsl(var(--cyber-black))',
+  				dark: 'hsl(var(--cyber-dark))',
+  				blue: 'hsl(var(--cyber-blue))',
+  				cyan: 'hsl(var(--cyber-cyan))',
+  				purple: 'hsl(var(--cyber-purple))',
+  				pink: 'hsl(var(--cyber-pink))',
+  				green: 'hsl(var(--cyber-green))'
   			},
-  			gold: {
-  				'300': 'hsl(var(--gold-300))',
-  				'400': 'hsl(var(--gold-400))',
-  				'500': 'hsl(var(--gold-500))'
+  			neon: {
+  				blue: 'hsl(var(--neon-blue))',
+  				cyan: 'hsl(var(--neon-cyan))',
+  				purple: 'hsl(var(--neon-purple))',
+  				pink: 'hsl(var(--neon-pink))'
   			}
   		},
   		fontFamily: {
   			sans: [
-  				'Inter var',
+  				'Inter',
+  				'-apple-system',
+  				'BlinkMacSystemFont',
+  				'Segoe UI',
   				'sans-serif'
+  			],
+  			cyber: [
+  				'Orbitron',
+  				'monospace'
+  			],
+  			mono: [
+  				'Courier New',
+  				'monospace'
   			]
   		},
   		animation: {
@@ -104,7 +119,13 @@ module.exports = {
   			'slide-up': 'slide-up 0.5s ease-out',
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			'float': 'float 3s ease-in-out infinite'
+  			'float': 'float 3s ease-in-out infinite',
+  			'glitch': 'glitch 0.3s ease-in-out',
+  			'pulse-neon': 'pulse-neon 2s ease-in-out infinite',
+  			'holographic': 'holographic-move 3s linear infinite',
+  			'scan': 'scan 4s linear infinite',
+  			'float-cyber': 'float-cyber 4s ease-in-out infinite',
+  			'data-stream': 'data-stream 2s ease-in-out infinite'
   		},
   		keyframes: {
   			'fade-in': {
@@ -148,12 +169,51 @@ module.exports = {
   				'50%': {
   					transform: 'translateY(-10px)'
   				}
+  			},
+  			'glitch': {
+  				'0%': { transform: 'translate(0)' },
+  				'20%': { transform: 'translate(-2px, 2px)' },
+  				'40%': { transform: 'translate(-2px, -2px)' },
+  				'60%': { transform: 'translate(2px, 2px)' },
+  				'80%': { transform: 'translate(2px, -2px)' },
+  				'100%': { transform: 'translate(0)' }
+  			},
+  			'pulse-neon': {
+  				'0%, 100%': { 
+  					opacity: '1',
+  					boxShadow: '0 0 20px currentColor'
+  				},
+  				'50%': { 
+  					opacity: '0.8',
+  					boxShadow: '0 0 30px currentColor'
+  				}
+  			},
+  			'holographic-move': {
+  				'0%': { backgroundPosition: '0 0' },
+  				'100%': { backgroundPosition: '40px 40px' }
+  			},
+  			'scan': {
+  				'0%': { transform: 'translateX(-100%)' },
+  				'100%': { transform: 'translateX(100vw)' }
+  			},
+  			'float-cyber': {
+  				'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+  				'33%': { transform: 'translateY(-10px) rotate(1deg)' },
+  				'66%': { transform: 'translateY(5px) rotate(-1deg)' }
+  			},
+  			'data-stream': {
+  				'0%': { opacity: '0', transform: 'translateY(-20px)' },
+  				'50%': { opacity: '1' },
+  				'100%': { opacity: '0', transform: 'translateY(20px)' }
   			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		backdropBlur: {
+  			xs: '2px'
   		}
   	}
   },
